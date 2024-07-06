@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ShevchenkoBiography.Models.Painting>
+@{
+    ViewBag.Title = ViewData["Title"];
+}
+@foreach (var painting in Model)
+{
+    <div class="card mb-3 text-center">
+        <div class="card-body">
+            <h3 class="card-title">@painting.Title (@painting.Year)</h3>
+            <img src="@Url.Content(painting.ImagePath)" class="img-fluid" alt="@painting.Title" />
+        </div>
+    </div>
+}
